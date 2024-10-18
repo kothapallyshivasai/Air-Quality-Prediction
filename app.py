@@ -4,7 +4,7 @@ import pickle
 import numpy as np
 
 # Load the Random Forest CLassifier model
-filename = 'random_forest_regression_model.pkl'
+filename = 'regression_model.pkl'
 classifier = pickle.load(open(filename, 'rb'))
 
 app = Flask(__name__)

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+        }
+        .card {
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h2 class="text-center mb-4">Weather Prediction</h2>
+            <form action="/predict" method="post">
+                <div class="mb-3">
+                    <label for="T" class="form-label">Temperature (T)</label>
+                    <input type="number" class="form-control" id="T" name="T" required>
+                </div>
+                <div class="mb-3">
+                    <label for="TM" class="form-label">Maximum Temperature (TM)</label>
+                    <input type="number" class="form-control" id="TM" name="TM" required>
+                </div>
+                <div class="mb-3">
+                    <label for="Tm" class="form-label">Minimum Temperature (Tm)</label>
+                    <input type="number" class="form-control" id="Tm" name="Tm" required>
+                </div>
+                <div class="mb-3">
+                    <label for="SLP" class="form-label">Sea Level Pressure (SLP)</label>
+                    <input type="number" class="form-control" id="SLP" name="SLP" required>
+                </div>
+                <div class="mb-3">
+                    <label for="H" class="form-label">Humidity (H)</label>
+                    <input type="number" class="form-control" id="H" name="H" required>
+                </div>
+                <div class="mb-3">
+                    <label for="VV" class="form-label">Visibility (VV)</label>
+                    <input type="number" step="0.1" class="form-control" id="VV" name="VV" required>
+                </div>
+                <div class="mb-3">
+                    <label for="V" class="form-label">Wind Speed (V)</label>
+                    <input type="number" step="0.1" class="form-control" id="V" name="V" required>
+                </div>
+                <div class="mb-3">
+                    <label for="VM" class="form-label">Maximum Wind Speed (VM)</label>
+                    <input type="number" class="form-control" id="VM" name="VM" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Predict</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
